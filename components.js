@@ -753,6 +753,30 @@ target.toLowerCase().replace(/ /g,'-');
 	}
 	}
 	},
+	
+	 join: function(target, room, user, connection) {
+		if (!target) return false;
+		var targetRoom = Rooms.get(target) || Rooms.get(toId(target));
+		if (!targetRoom) {
+			if (target === 'lobby') return connection.sendTo(target, "|noinit|nonexistent|");
+			return connection.sendTo(target, "|noinit|nonexistent|The room '"+target+"' does not exist.");
+		}
+		if (targetRoom.isPrivate && !user.named) {
+			return connection.sendTo(target, "|noinit|namerequired|You must have a name in order to join the room '"+target+"'.");
+		}
+		if (!user.joinRoom(targetRoom || room, connection)) {
+			return connection.sendTo(target, "|noinit|joinfailed|The room '"+target+"' could not be joined.");
+		}
+		if (target.toLowerCase() == "lobby") {
+			return connection.sendTo('lobby','|html|<div class="broadcast-omega"><h1><center><b><u>Welcome to the Omega!</u></b></center></h1><br/><br/<center><img src="http://fc05.deviantart.net/fs71/f/2012/254/5/8/logo___pokemon_omega_version_by_ashnixslaw-d5edryl.png"><br/><br/><center><b>What Can You Do Here?</b></center><hr>' +
+'<center><b>Participate In Tournaments For Money And Prizes!</b></center><br>' +
+'<center><b>Join Various Leagues And Clans!</b></center><br>' +
+'<center><b>Our Just Hang Out And Chat</b></center><br>' +
+'<center><b>If You Liked Your Experience here Make Sure To Tell Your Friends About Us!</b></center><hr><br>' +
+'<center><b>For General Help For Server Commands Use /serverhelp</b></center><br>' +
+'<center><b>If You Have Any Problems Pm a Staff Member, Only Serious Problems Should Be Taken To Admins (~)</b></center><hr><br>' +
+'<center><a href="http://pokemonshowdown.com/rules"><button class="bluebutton" title="Rules"><font color="white"><b>Rules</b></a></button>   |   <a href="http://www.smogon.com/sim/faq"><button class="bluebutton" title="FAQs"><font color="white"><b>FAQs</b></a></button> </button></div>');
+		}
     /*********************************************************
      * Server management commands
      *********************************************************/
