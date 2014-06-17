@@ -1413,8 +1413,6 @@ var ChatRoom = (function () {
 		if (this.welcome && this.welcome.length > 0)
 			CommandParser.parse('/welcomemessage', this, user, connection);
 		if (this.reminders && this.reminders.length > 0)
-			CommandParser.parse('/reminder', this, user, connection);
-		CommandParser.parse('/donate', this, user, connection);
 	};
 	ChatRoom.prototype.onJoin = function (user, connection, merging) {
 		if (!user) return false; // ???
@@ -1439,8 +1437,7 @@ var ChatRoom = (function () {
 			var modchat = this.getModchatNote();
 			this.send('|init|chat\n|title|' + this.title + '\n' + userList + '\n' + this.logGetLast(100).join('\n') + modchat, connection);
 			if (this.reminders && this.reminders.length > 0)
-				CommandParser.parse('/reminder', this, user, connection);
-			CommandParser.parse('/donate', this, user, connection);
+				CommandParser.parse('/welcomemessage', this, user, connection);
 		}
 		if (global.Tournaments && Tournaments.get(this.id))
 			Tournaments.get(this.id).update(user);
