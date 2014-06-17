@@ -47,9 +47,17 @@ border-color:black;
 
 body{background-image:url("http://i.imgur.com/25nxvyJ.jpg");background-repeat:no-repeat;background-position:center}
  
- .menugroup .button{background:#000000}
+ .menugroup .button{
+ 	background:#000000
+ 	border-color: #FFFFFF;
+ 	font-size: 8pt;
+ 	}
  
- .menugroup .button:hover{background:#03fff7}
+ .menugroup .button:hover{
+ 	background:#03fff7
+ 	border-color: #FFFFFF;
+ 	font-size: 8pt;
+ 	}
 
 .menugroup button.big {
     font-size: 8pt;
@@ -125,7 +133,7 @@ outline: 2px solid white;
 .infobox {
 	border: 2px solid #6688AA;
 	padding: 2px 4px;
-background-color:#58ACFA;
+background-color:#CEE3F6;
 }
 .pad, .ps-popup, .pm-log{
 background: url("http://i.imgur.com/Q8vHT0Y.png");
@@ -146,7 +154,7 @@ border: 1px solid #000;
         min-height: 40px;
         padding: 2px 4px 2px 26px;
 }
-.statbar strong
+        .statbar strong
 {
         position: absolute;
         left: 30px;
