@@ -63,13 +63,13 @@ background-position:center;
 }
 
 .tabbar a.button: {
-background:#2E64FE;
+background:#5882FA;
 color: white;
 border-color:black;
 }
 
 .tabbar a.button.cur, .tabbar a.button.cur:hover {
-background:#2E64FE;
+background:#5882FA;
 color:white;
 border-color:black ;
 border-bottom: 0;
@@ -79,7 +79,7 @@ padding-bottom: 5px;
 top: 0px;
 }
 .maintabbarbottom {
-background:#2E64FE;
+background:#5882FA;
 border-color: #FFFFFF;
 }
 .closebutton,.minimizebutton {
@@ -396,8 +396,8 @@ ps-room.ps-room-light {
  opacity:0.99;
  }
 .broadcast-omega {
-	background-color:#084B8A;
-border: 2px solid #fff;
+	background-color:;
+border: 2px solid #fff;#5882FA
 color:black ;
 	padding: 2px 4px;
 }
