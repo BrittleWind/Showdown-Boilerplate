@@ -42,8 +42,11 @@ border-color:black;
 }
 
 .chat-log-add {
-	background-color:#ffffff
+background:#A9E2F3 ;
+color:#A9F5F2;
+border-color: #FFFFFF;
 }
+
 
 body{background-image:url("http://i.imgur.com/25nxvyJ.jpg");background-repeat:no-repeat;background-position:center}
  
@@ -88,7 +91,7 @@ padding-bottom: 5px;
 top: 0px;
 }
 .maintabbarbottom {
-background:#5882FA;
+background:#A9E2F3;
 border-color: #FFFFFF;
 }
 .closebutton,.minimizebutton {
