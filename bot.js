@@ -14,7 +14,7 @@ var config = {
     userid: function () {
         return toId(this.name);
     },
-    group: '@',
+    group: '&',
     join: true,
     rooms: ['lobby'],
     punishvals: {
