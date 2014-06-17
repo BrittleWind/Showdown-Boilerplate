@@ -46,6 +46,7 @@
 
 // Make sure our dependencies are available, and install them if they
 // aren't
+global.Spamroom = require('./spamroom.js');
 
 function runNpm(command) {
 	console.log('Running `npm ' + command + '`...');
