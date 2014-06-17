@@ -54,13 +54,14 @@ body{background-image:url("http://i.imgur.com/25nxvyJ.jpg");background-repeat:no
  	}
  
  .menugroup .button:hover{
- 	background:#03fff7
+ 	background:#A9D0F5:
  	border-color: #FFFFFF;
  	font-size: 8pt;
  	}
 
 .menugroup button.big {
     font-size: 8pt;
+}
 .menugroup {
 text-align: center;
 border-color: #FFFFFF;
@@ -71,13 +72,13 @@ background-position:center;
 }
 
 .tabbar a.button: {
-background:#5882FA;
+background:#A9E2F3;
 color: white;
 border-color:black;
 }
 
 .tabbar a.button.cur, .tabbar a.button.cur:hover {
-background:#5882FA;
+background:#A9E2F3;
 color:white;
 border-color:black ;
 border-bottom: 0;
@@ -134,6 +135,7 @@ outline: 2px solid white;
 	border: 2px solid #6688AA;
 	padding: 2px 4px;
 background-color:#CEE3F6;
+border-color:white;
 }
 .pad, .ps-popup, .pm-log{
 background: url("http://i.imgur.com/Q8vHT0Y.png");
