@@ -383,7 +383,7 @@ var commands = {
             if (!target) return;
             var message = reply[Math.floor(Math.random() * reply.length)];
 
-            this.sendPm(message);
+            this.sendReply(message);
         };
     })(),
 
