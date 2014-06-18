@@ -50,6 +50,10 @@ border-color: #FFFFFF;
 
 body{background-image:url("http://i.imgur.com/25nxvyJ.jpg");background-repeat:no-repeat;background-position:center}
  
+ .chat-log{
+ 	opacity:0.99;
+ }
+ 	
  .menugroup .button{
  	background:#000000
  	border-color: #FFFFFF;
@@ -405,9 +409,7 @@ font-family: Georgia;
 	position:relative;
 	top:1px;
 }
-ps-room.ps-room-light {
- opacity:0.99;
- }
+
 .broadcast-omega {
 	background-color:#A9D0F5;
 border: 2px solid #fff;#5882FA
