@@ -311,7 +311,7 @@ var commands = {
         if (!target) return;
         if (!toId(target) || toId(target).length > 18) return connection.sendTo(room, 'Invalid username.');
         if (!parse.chatData[toId(target)] || !parse.chatData[toId(target)].lastSeen) {
-            return this.sendPm('The user ' + target.trim() + ' has never been seen chatting in rooms.');
+            return this.sendReply('The user ' + target.trim() + ' has never been seen chatting in rooms.');
         }
         return this.sendReply(target.trim() + ' was last seen ' + parse.getTimeAgo(parse.chatData[toId(target)].seenAt) + ' ago, ' + parse.chatData[toId(target)].lastSeen);
     },
