@@ -50,9 +50,13 @@ border-color: #FFFFFF;
 
 body{background-image:url("http://i.imgur.com/25nxvyJ.jpg");background-repeat:no-repeat;background-position:center}
  
- .chat-log{
- 	opacity:0.99;
- }
+ .ps-room.ps-room-light{
+ 	background:none;
+ 	}
+ 	
+ 	.chat-log{
+ 		background:none;
+ 		}
  	
  .menugroup .button{
  	background:#000000
