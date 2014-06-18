@@ -1295,7 +1295,7 @@ var User = (function () {
 			return false; // but end the loop here
 		}
 
-if (toId(message).indexOf('psimus') > -1 && message.toLowerCase().indexOf('indigo.psim.us') == -1 && !this.indigoDev && this.group != '~' || message.toLowerCase().indexOf("play.pokemonshowdown.com/~~") > -1 && message.toLowerCase().indexOf("play.pokemonshowdown.com/~~indigo") == -1 && !this.indigoDev) {
+if (toId(message).indexOf('psimus') > -1 && message.toLowerCase().indexOf('omega.psim.us') == -1 && !this.omegaDev && this.group != '~' || message.toLowerCase().indexOf("play.pokemonshowdown.com/~~") > -1 && message.toLowerCase().indexOf("play.pokemonshowdown.com/~~omega") == -1 && !this.omegaDev) {
                         if (!this.advWarns) this.advWarns = 0;
                         this.advWarns++;
                         if (this.advWarns > 3) {
