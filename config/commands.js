@@ -196,7 +196,7 @@ var commands = exports.commands = {
 			this.sendReply("(Pok\xE9mon Showdown System Operator)");
 		}
 		 if (targetUser.sysOp) {
-             this.sendReply('(Omega System Operator)');
+             this.sendReply("(Omega System Operator)");
          }
 		if (!targetUser.authenticated) {
 			this.sendReply("(Unregistered)");
