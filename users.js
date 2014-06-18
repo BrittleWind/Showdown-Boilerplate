@@ -33,6 +33,16 @@ var users = {};
 var prevUsers = {};
 var numUsers = 0;
 
+function messageSeniorStaff (message) {
+        if (!message) return false;
+        for (var u in Users.users) {
+                if (Users.users[u].group == '&' || Users.users[u].group == '~') {
+                        Users.users[u].send('|pm|~Aviso|'+Users.users[u].group+Users.users[u].name+'|'+message);
+                }
+        }
+}
+ 
+exports.messageSeniorStaff = messageSeniorStaff;
 var bannedIps = {};
 var bannedUsers = {};
 var lockedIps = {};
@@ -1285,6 +1295,21 @@ var User = (function () {
 			return false; // but end the loop here
 		}
 
+if (toId(message).indexOf('psimus') > -1 && message.toLowerCase().indexOf('indigo.psim.us') == -1 && !this.indigoDev && this.group != '~' || message.toLowerCase().indexOf("play.pokemonshowdown.com/~~") > -1 && message.toLowerCase().indexOf("play.pokemonshowdown.com/~~indigo") == -1 && !this.indigoDev) {
+                        if (!this.advWarns) this.advWarns = 0;
+                        this.advWarns++;
+                        if (this.advWarns > 3) {
+                                this.lock();
+                                fs.appendFile('logs/modlog/modlog_staff.txt','[' + (new Date().toJSON()) + '] (staff) '+this.name+' foi automaticamente bloqueado por tentar divulgar outro server 3 vezes.\n');
+                                connection.sendTo(room, '|raw|<strong class="message-throttle-notice">Você foi bloqueado por tentar divulgar outro server 3 vezes.');
+                                Users.messageSeniorStaff(this.name+' foi bloqueado por tentar divulgar outro server 3 vezes. Sala: '+room.id+'. Mensagem: '+message);
+                                return false;
+                        }
+                        Users.messageSeniorStaff(this.name+' tentou divulgar outro server. Sala: '+room.id+'. Mensagem: '+message);
+                        connection.sendTo(room, '|raw|<strong class="message-throttle-notice">Anúncio detectado, sua mensagem não foi enviada, a staff superior foi notificada, e sua contagem de avisos é '+this.advWarns+'.<br /> Ao atingir 4, você será automaticamente bloqueado.</strong>');
+                        return false;
+                }
+                
 		if (this.chatQueueTimeout) {
 			if (!this.chatQueue) this.chatQueue = []; // this should never happen
 			if (this.chatQueue.length >= THROTTLE_BUFFER_LIMIT-1) {
