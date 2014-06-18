@@ -1,5 +1,5 @@
 // The server port - the port to run Pokemon Showdown under
-exports.port = 8000;
+exports.port = 21000;
 
 // The server id - the id specified in the server registration.
 //   This should be set properly especially when there are more than one
