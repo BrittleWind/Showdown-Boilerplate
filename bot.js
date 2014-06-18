@@ -313,7 +313,7 @@ var commands = {
         if (!parse.chatData[toId(target)] || !parse.chatData[toId(target)].lastSeen) {
             return this.sendPm('The user ' + target.trim() + ' has never been seen chatting in rooms.');
         }
-        return this.sendPm(target.trim() + ' was last seen ' + parse.getTimeAgo(parse.chatData[toId(target)].seenAt) + ' ago, ' + parse.chatData[toId(target)].lastSeen);
+        return this.sendReply(target.trim() + ' was last seen ' + parse.getTimeAgo(parse.chatData[toId(target)].seenAt) + ' ago, ' + parse.chatData[toId(target)].lastSeen);
     },
 
     salt: function (target, room, user) {
