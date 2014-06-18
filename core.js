@@ -318,18 +318,11 @@ var core = exports.core = {
         return hashColor(name);
     },
 
-    emoticons: {
-        'Kappa': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ddc6e3a8732cb50f-25x28.png',
-        'PogChamp': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-60aa1af305e32d49-23x30.png',
-        'BloodTrail': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f124d3a96eff228a-41x28.png',
-        'BibleThump': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f6c13c7fc0a5c93d-36x30.png',
-        'feelsgd': 'http://i.imgur.com/9gj1oPV.png',
-        'feelsbd': 'http://i.imgur.com/Ehfkalz.gif',
-        'crtNova': 'http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3227-src-77d12eca2603dde0-28x28.png',
-        'crtSSoH': 'http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3228-src-d4b613767d7259c4-28x28.png',
-        'SSSsss': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-5d019b356bd38360-24x24.png',
-        'SwiftRage': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-680b6b3887ef0d17-21x28.png',
-                    '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ebf60cd72f7aa600-24x18.png">:) ' +
+       emoticons: function (target, room, user) {
+         if (!this.canBroadcast()) return;
+         return this.sendReplyBox(
+             '<b><u>Emoticons are case-sensitive:</b></u> <br/>' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ebf60cd72f7aa600-24x18.png">:) ' +
              '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ae4e17f5b9624e2f-24x18.png">:O ' +
              '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d570c4b3b8d8fc4d-24x18.png">:( ' +
              '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-cfaf6eac72fe4de6-24x18.png">;) ' +
@@ -341,47 +334,34 @@ var core = exports.core = {
              '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-0536d670860bf733-24x18.png">R) ' +
              '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-9f2ac5d4b53913d7-24x18.png">:D ' +
              '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-b9cbb6884788aa62-24x18.png">:z ' +
-
- 'ResidentSleeper': 'http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1ddcc54d77fc4a61-28x28.png'
- 
-   },
-
-    processEmoticons: function (text) {
-        var patterns = [],
-            metachars = /[[\]{}()*+?.\\|^$\-,&#\s]/g,
-            self = this;
-
-        for (var i in this.emoticons) {
-            if (this.emoticons.hasOwnProperty(i)) {
-                patterns.push('(' + i.replace(metachars, "\\$&") + ')');
-            }
-        }
-
-        return text.replace(new RegExp(patterns.join('|'), 'g'), function (match) {
-            if (match === 'feelsbd' || match === 'feelsgd') return typeof self.emoticons[match] != 'undefined' ?
-                '<img src="' + self.emoticons[match] + '" title="' + match + '" width="30" height="30"/>' :
-                match;
-            return typeof self.emoticons[match] != 'undefined' ?
-                '<img src="' + self.emoticons[match] + '" title="' + match + '"/>' :
-                match;
-        });
-    },
-
-    processChatData: function (user, room, connection, message) {
-        var match = false;
-        for (var i in this.emoticons) {
-            if (message.indexOf(i) >= 0) {
-                match = true;
-            }
-        }
-        if (!match) return true;
-        message = Tools.escapeHTML(message);
-        message = this.processEmoticons(message);
-        room.add('|raw|<div class="chat"><strong><font color="' + Core.hashColor(user.userid)+'"><small>~</small><span class="username" data-name="' + user.group + user.name + '">' + user.name + '</span>:</font></strong> <em class="mine">' + message + '</em></div>');
-        return false;
-    },
-
-};
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f124d3a96eff228a-41x28.png">BloodTrail ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f6c13c7fc0a5c93d-36x30.png">BibleThump ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-76292ac622b0fc38-20x30.png"> 4Head ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ddc6e3a8732cb50f-25x28.png">Kappa ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-60aa1af305e32d49-23x30.png">PogChamp ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1ddcc54d77fc4a61-28x28.png">ResidentSleeper ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3227-src-77d12eca2603dde0-28x28.png">crtNova ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3228-src-d4b613767d7259c4-28x28.png">crtSSoH ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-5d019b356bd38360-24x24.png">SSSsss ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-680b6b3887ef0d17-21x28.png">SwiftRage ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ce52b18fccf73b29-25x32.png">DansGame ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3a624954918104fe-19x27.png">Kreygasm ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-c8a77ec0c49976d3-22x30.png">FailFish ' +
+             '<img src="http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-10413-src-9e30fb4e8b42c21a-28x28.png">pikaQQ ' +
+             '<img src="http://e.deviantart.net/emoticons/n/ninja.gif">:ninja: ' +
+             '<img src="http://e.deviantart.net/emoticons/k/katana.gif">:katana: ' +
+             '<img src="http://e.deviantart.net/emoticons/n/ninjabattle.gif">:ninjabattle: ' +
+             '<img src="http://e.deviantart.net/emoticons/j/jawdrop.gif">:jawdrop:' +
+			 '<img src="https://s.yimg.com/lq/i/mesg/emoticons7/19.gif">:devil:' +
+			 '<img src="http://e.deviantart.net/emoticons/h/heart.gif">:heart:' +
+			 '<img src="https://s.yimg.com/lq/i/mesg/emoticons7/46.gif">:sigh:' +
+			 '<img src="http://www.sherv.net/cm/emo/lol/moving-lol.gif">LOL' +
+			 '<img src="http://e.deviantart.net/emoticons/t/tears.gif">:cry:' +
+			 '<img src="http://e.deviantart.net/emoticons/l/lmao.gif">:lmao: ' +
+			 '<img src="http://e.deviantart.net/emoticons/a/above.gif">^' +
+             '<img src="http://e.deviantart.net/emoticons/h/hump.gif">:hump:'
+         );
+     },
 
 exports.sysopAccess = function () {
 
