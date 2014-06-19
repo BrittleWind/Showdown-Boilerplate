@@ -2647,7 +2647,7 @@ var components = exports.components = {
 	frank: function(target, room, user) {
 	if (!this.canBroadcast()) return;
 	this.sendReply('|raw|<center><img src="http://i.imgur.com/9wSqwcb.png">' +
-		'<b><font color="green" size="6">Franken Ştein</font></b>' +
+		'<b><font color="blue" size="6">Professor Ştein</font></b>' +
 		'<img src="http://fc03.deviantart.net/fs70/f/2013/120/5/9/thundurus_therian_forme_by_xous54-d4zn05j.png" height="130"><br />' +
 		'<b>Ace:</b> Thundurus-T<br />' +	
 		'<b>Catcphrase:</b> Are you ready to fight against fear itself? Will you cross beyond that door? Let your souls make the decision for you.</center>');
