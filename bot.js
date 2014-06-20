@@ -355,39 +355,9 @@ var commands = {
         };
     })(),
 
-    helix: (function () {
-        var reply = [
-            "Signs point to yes.",
-            "Yes.",
-            "Reply hazy, try again.",
-            "Without a doubt.",
-            "My sources say no.",
-            "As I see it, yes.",
-            "You may rely on it.",
-            "Concentrate and ask again.",
-            "Outlook not so good.",
-            "It is decidedly so.",
-            "Better not tell you now.",
-            "Very doubtful.",
-            "Yes - definitely.",
-            "It is certain.",
-            "Cannot predict now.",
-            "Most likely.",
-            "Ask again later.",
-            "My reply is no.",
-            "Outlook good.",
-            "Don't count on it."
-        ];
+    
 
-        return function (target, room, user) {
-            if (!target) return;
-            var message = reply[Math.floor(Math.random() * reply.length)];
-
-            this.sendReply(message);
-        };
-    })(),
-
-roleplay: (function () {
+   roleplay: (function () {
         var reply = [
             "A group of kids who were friends of White of Black are about to start their journey. But before they leave, they hear of a man named N who was once the leader of Team Plasma. Soon the kids will recieve their pokemon and be on their merry way to becoming Champion. But is that what they really want as they listen to White's touching tale of her lost love? Many of the kids change their minds and decide to go to that one mysterious island where N is. But that mysterious island has a horrible secret of magic and trickery. Anyone who takes a step on that island becomes a half pokemon half human called Gajinka. So what has happened to N? Note: All people who step on the island become half of the first pokemon they ever had. In this RP, you can have pokemon from any region. On the island are Gajinka and Pokemon. The kids haven't recieved their pokemon yet.",
             "In the future of the Pokemon world, when ash and his friends have died off, a new team rises. Team Dark Shadows. They use pokèmon in experiments, turning them into shadow pokemon, the failures usually shinies. They plan to eventually clone the legendaries, making shadow counterparts. Will you fight against this evil plot, or possibly join fight against the light itself, and turn to the darkness?",
