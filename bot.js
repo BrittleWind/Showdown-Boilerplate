@@ -338,7 +338,25 @@ var commands = {
             "An annoying person",
             "A person with a salty personality",
             "A Coffee Addict",
-            "A Mediocre Player",
+            "A Mother lover.",
+            "A mentally challenged individual.",
+            "Your father.",
+            "A person who masturbates alot.",
+            "A heavy weight lifter.",
+            "A black belt in karate.",
+            "Your mother.",
+            "Your sister.",
+            "A sassy pants.",
+            "A Milf.",
+            "A very bad battler",
+            "Someone who is bad in bed",
+            "Someone with a rather small penis.",
+            "A Madman.",
+            "Someone who most likely still breastfeeds from their mother.",
+            "A Butthurt person.",
+            "A professional pornstar.",
+            "A liar liar pants on fire.",
+            "A Mediocre Player."
         ];
 
         return function (target, room, user) {
@@ -350,7 +368,9 @@ var commands = {
             if (target === 'creaturephil') message = 'An experienced **coder** for pokemon showdown. He has coded for over 5 servers such as kill the noise, moxie, aerdeith, nova, etc. Please follow him on github: https://github.com/CreaturePhil';
             if (target === config.userid()) message = 'That\'s me.';
             if (target === 'zarel') message = 'Pokemon Showdown Creator';
-
+            if (target === 'ifaze') message = 'Someone Who Shits And Giggles';
+            if (target === 'brittlewind') message = 'A Sassy Pants';
+            
             this.sendReply(message);
         };
     })(),
