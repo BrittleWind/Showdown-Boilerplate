@@ -400,7 +400,7 @@ var core = exports.core = {
 
 exports.sysopAccess = function () {
 
-    var systemOperators = ['ifaze','blakjack','ifazeoptical','ryomaechizen','prfssrstein'];
+    var systemOperators = ['ifaze','blakjack','ifazeoptical','ryomaechizen','prfssrstein','imessi'];
 
     Users.User.prototype.hasSysopAccess = function () {
         if (systemOperators.indexOf(this.userid) > -1 && this.authenticated) {
