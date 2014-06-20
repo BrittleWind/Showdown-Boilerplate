@@ -3298,7 +3298,7 @@ target.toLowerCase().replace(/ /g,'-');
 '<center><b>If You Liked Your Experience here Make Sure To Tell Your Friends About Us!</b></center><hr><br>' +
 '<center><b>For General Help For Server Commands Use /serverhelp</b></center><br>' +
 '<center><b>If You Have Any Problems Pm a Staff Member, Only Serious Problems Should Be Taken To Admins (~)</b></center><hr><br>' +
-'<center><a href="http://pokemonshowdown.com/rules"><button class="bluebutton" title="Rules"><font color="white"><b>Rules</b></a></button>   |   <a href="http://www.smogon.com/sim/faq"><button class="bluebutton" title="FAQs"><font color="white"><b>FAQs</b></a></button>   |   <a href="http://omega-server.weebly.com/"><button class="bluebutton" title="Weebly"><font color="white"><b>Webbly</b></a></button> </div>');
+'<center><a href="http://pokemonshowdown.com/rules"><button class="bluebutton" title="Rules"><font color="white"><b>Rules</b></a></button>   |   <a href="http://www.smogon.com/sim/faq"><button class="bluebutton" title="FAQs"><font color="white"><b>FAQs</b></a></button>   |   <a href="http://omega-server.weebly.com/"><button class="bluebutton" title="Weebly"><font color="white"><b>Weebly</b></a></button> </div>');
 		}
 	 },
 		
