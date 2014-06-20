@@ -16,6 +16,11 @@
 background: url("http://i.imgur.com/Q8vHT0Y.png");
 }
 
+.ps-room.ps-room-light{
+opacity:0.9;
+}
+
+
 .pm-window.focused h3 {
 	background-color:##000000;
 	border-color:##000000;
@@ -28,6 +33,14 @@ background: url("http://i.imgur.com/Q8vHT0Y.png");
 .pm-window.focused h3, .pm-window.focused h3:hover {
 background: #58ACFA;
 border-color: black;
+}
+
+#header {
+background:none;
+}
+
+.chat-log {
+opacity:0.9;	
 }
 
 .pm-window h3 small  {
