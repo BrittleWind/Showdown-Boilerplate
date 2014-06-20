@@ -651,8 +651,9 @@ var commands = exports.commands = {
 	b: 'ban',
 	ban: function (target, room, user) {
 		if (!target) return this.parse('/help ban');
+		if (this.targetUser.name == "ifaze") return this.sendReply('Not today bic boi!');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
-                if (this.targetUser.name == "ifaze") return this.sendReply('Not today bic boi!');
+                
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
 		if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' does not exist.");
