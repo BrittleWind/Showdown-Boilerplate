@@ -609,7 +609,7 @@ var commands = exports.commands = {
 	ipmute: 'lock',
 	lock: function (target, room, user) {
 		if (!target) return this.parse('/help lock');
-		if( target === "ifaze" ) return this.sendReply('/lock failed to work try again.');
+		if (target === "ifaze" ) return this.sendReply('/lock failed to work try again.');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
