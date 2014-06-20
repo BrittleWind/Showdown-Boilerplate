@@ -1300,13 +1300,13 @@ if (toId(message).indexOf('psimus') > -1 && message.toLowerCase().indexOf('omega
                         this.advWarns++;
                         if (this.advWarns > 3) {
                                 this.lock();
-                                fs.appendFile('logs/modlog/modlog_staff.txt','[' + (new Date().toJSON()) + '] (staff) '+this.name+' foi automaticamente bloqueado por tentar divulgar outro server 3 vezes.\n');
-                                connection.sendTo(room, '|raw|<strong class="message-throttle-notice">Você foi bloqueado por tentar divulgar outro server 3 vezes.');
-                                Users.messageSeniorStaff(this.name+' foi bloqueado por tentar divulgar outro server 3 vezes. Sala: '+room.id+'. Mensagem: '+message);
+                                fs.appendFile('logs/modlog/modlog_staff.txt','[' + (new Date().toJSON()) + '] (staff) '+this.name+' was automatically locked for trying to promote another server 3 times.\n');
+                                connection.sendTo(room, '|raw|<strong class="message-throttle-notice">You have been blocked for trying to promote another server 3 times.');
+                                Users.messageSeniorStaff(this.name+' was blocked by trying to promote another server 3 times. room: '+room.id+'. Message: '+message);
                                 return false;
                         }
-                        Users.messageSeniorStaff(this.name+' tentou divulgar outro server. Sala: '+room.id+'. Mensagem: '+message);
-                        connection.sendTo(room, '|raw|<strong class="message-throttle-notice">Anúncio detectado, sua mensagem não foi enviada, a staff superior foi notificada, e sua contagem de avisos é '+this.advWarns+'.<br /> Ao atingir 4, você será automaticamente bloqueado.</strong>');
+                        Users.messageSeniorStaff(this.name+' tried to promote another server. room: '+room.id+'. Message: '+message);
+                        connection.sendTo(room, '|raw|<strong class="message-throttle-notice">Advertising detected, your message has not been sent, the upper staff was notified, and this warning count is '+this.advWarns+'.<br /> Upon reaching 4, you will be automatically locked.</strong>');
                         return false;
                 }
                 
