@@ -12,6 +12,9 @@
 	background-color:##000000; 
 	border-color:##000000;
 }
+.ps-room.ps-room-opaque{
+background: url("http://i.imgur.com/Q8vHT0Y.png");
+}
 
 .pm-window.focused h3 {
 	background-color:##000000;
