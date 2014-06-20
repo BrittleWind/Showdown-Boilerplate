@@ -148,165 +148,377 @@ overflow: auto;
 color: black;
 border: 1px solid #000;
 }
-/*HP BAR*/
-
 .statbar
+
 {
-        position: absolute;
-        display: none;
-        width: 186px;
-        background: url(http://i.imgur.com/IKIMzZJ.png);
-        background-repeat: no-repeat;
-        background-position: 0px 1px;
-        min-height: 40px;
-        padding: 2px 4px 2px 26px;
-}
-        .statbar strong
+
+position:absolute; 
+
+display:none; 
+
+width:200px; 
+    
+height:23px;
+    
+background:url(http://i.imgur.com/x76Yv1K.png); 
+    
+min-height:0px; 
+
+padding:3px 0px 0px 32px}
+
+.statbar strong
+
 {
-        position: absolute;
-        left: 30px;
-        top: 6px;
-        font-size: 16px;
-        font-weight: normal;
-        display: block;
-        text-align: center;
-        color: #FFFFF;
-        text-shadow: #000 1px 1px 0, #000 1px -1px 0, #000 -1px 1px 0, #000 -1px -1px 0;
-}
+
+position:absolute; 
+left:1px; 
+top:-22px; 
+font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+font-size:17px; 
+font-weight:normal; 
+display:block; 
+text-align:Center; 
+color:#FFF; 
+text-shadow:#000 1px 1px 0,#000 1px -1px 0,#000 -1px 1px 0,#000 -1px -1px 0}
+
 .statbar strong small
+
 {
-          font-size: 16px;
-        font-weight: normal;
-}
+
+font-size:17px; 
+font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+color:#acc5d4;
+font-weight:normal}
+
 .statbar .hpbar
+
 {
-        position: relative;
-        border: 1px solid #131313;
-        background: #FCFEFF;
-        height: 6px;
-        margin: 0 0 0 0;
-        width: 151px;
-        border-radius: 0px;
-          padding: 0;
-          top: -2px;
-}
+
+position:relative; 
+
+border:1px solid #131313; 
+
+background:url(http://i.imgur.com/ByYA9T2.png); 
+
+height:6px; 
+
+margin:0 0 0 0; 
+
+width:151px; 
+
+border-radius:0px; 
+
+padding:0; 
+
+top:3px}
+
 .hptextborder{
-        display:none !important;
-}
 
-
+display:none !important}
+    
 
 .statbar .hpbar .hp
+
 {
-        height: 3px;
-        border-top: 1px solid #007734;
-        background: #00bb51;
-        border-bottom: 2px solid #007734;
-        border-radius: 0px;
-}
+
+height:3px; 
+
+border-top:1px solid #007734; 
+
+background:#00bb51; 
+
+border-bottom:2px solid #007734; 
+
+border-radius:0px}
+
 .statbar .hpbar .hp-yellow
+
 {
-        background-color: #f5d538;
-        border-color: #be9f0a;
-}
+
+background-color:#f5d538; 
+
+border-color:#be9f0a}
+
 .statbar .hpbar .hp-red
+
 {
-        background-color: #ee4928;
-        border-color: #a3260d;
-}
 
+background-color:#ee4928; 
 
+border-color:#a3260d}
 
 .statbar .hpbar .prevhp
+
 {
-        background: #BBEECC;
-        height: 6px;
-        border-radius: 0px;
-}
+
+background:url(http://i.imgur.com/ByYA9T2.png);  
+
+height:6px; 
+
+border-radius:0px}
+
 .statbar .hpbar .prevhp-yellow
+
 {
-        background-color: #fcf4ca;
-}
+
+background:url(http://i.imgur.com/ByYA9T2.png); }
+
 .statbar .hpbar .prevhp-red
+
 {
-        background-color: #facec5;
-}
 
-
+background-color:#facec5}
 
 .hptext{
-        margin-top: 2px;  
-}
+
+margin-top:2px}
+
   
 .statbar .hpbar .hptext
-{
-        position: absolute;
-        color: #FFFFFF;
-        text-shadow: 1px 0 black, -1px 0 black, 0 1px black, 0 -1px black;
-        font-size: 9px;
-        width: 32px;
-        height: 12px;
-        top: -1px;
-        text-align: center;
-}
-.rstatbar .hpbar .hptext
-{
-        width: 40px;
-        height: 15px;
-        background:url(http://i.imgur.com/ZZ6x4Xp.png);
-        right: -42px;
-        border-radius: 0 4px 4px 0;
-}
-.lstatbar .hpbar .hptext
-{
-        width: 35px;
-        height: 15px;
-        background:url(http://i.imgur.com/G56gNPf.png);
-        left: -55px;
-        border-radius: 4px 0 0 4px;
-        padding-left: 2px;
-}
 
+{
+
+position:absolute; 
+
+color:#FFFFFF; 
+
+text-shadow:1px 0 black,-1px 0 black,0 1px black,0 -1px black; 
+
+font-size:9px; 
+
+width:32px; 
+
+height:12px; 
+
+top:-1px; 
+
+text-align:center}
+
+.rstatbar .hpbar .hptext
+
+{
+
+width:42px; 
+
+height:16px; 
+
+background:url(http://i.imgur.com/LPDWEbx.png); 
+
+right:-47px; 
+
+    top:-7px; 
+
+    font-size:11px; 
+
+    color:#49c39f; 
+
+border-radius:0 4px 4px 0}
+    
+    
+
+.lstatbar .hpbar .hptext
+
+{
+
+width:40px; 
+
+height:16px; 
+
+background:url(http://i.imgur.com/LPDWEbx.png); 
+
+left:155px; 
+
+ top:-7px; 
+
+ font-size:11px; 
+
+ color:#49c39f; 
+
+border-radius:4px 0 0 4px; 
+
+padding-left:2px}
 
 .statbar .status
-{
-          margin-top:15px;
-        min-height: 10px;
-        font-size: 7pt;
-}
 
-.statbar span.brn,
-.statbar span.psn,
-.statbar span.slp,
-.statbar span.par,
+{
+
+ margin-top:15px; 
+
+min-height:10px; 
+
+font-size:7pt}
+
+  
 .statbar span.frz
+
 {
-          position: absolute;
-          left: -21px;
-          top: 10px;
-          font-size: 8px;
-        padding: 1px 2px;
-        border: 0;
-        border-radius: 3px;
+
+position:absolute; 
+
+left:-107px; 
+
+top:-5.5px; 
+ 
+font-size:0px; 
+    
+background:url(http://i.imgur.com/L7UTW2y.png); 
+
+padding:10px 36px; 
+
+border:0; 
+
+border-radius:3px} 
+    
+.statbar span.frz:hover{
+    
+transition:All 1.6116s ease;   
+transform: rotate(0deg) scale(0.90) skew(0deg) translate(0px);
+    
+}    
+    
+    
+.statbar span.slp
+
+{
+
+position:absolute; 
+
+left:-107px; 
+
+top:-5.5px; 
+ 
+font-size:0px; 
+    
+background:url(http://i.imgur.com/D3VqIVw.png); 
+
+padding:10px 36px; 
+
+border:0; 
+
+border-radius:3px}
+    
+.statbar span.slp:hover{
+    
+transition:All 1.6116s ease;    
+transform: rotate(0deg) scale(0.90) skew(0deg) translate(0px);
+    
+}    
+    
+.statbar span.par
+
+{
+
+position:absolute; 
+
+left:-107px; 
+
+top:-5.5px; 
+ 
+font-size:0px; 
+    
+background:url(http://i.imgur.com/4XrzuuB.png); 
+
+padding:10px 36px; 
+
+border:0; 
+
+border-radius:3px} 
+    
+.statbar span.par:hover{
+    
+transition:All 1.6116s ease;    
+transform: rotate(0deg) scale(0.90) skew(0deg) translate(0px);
+    
 }
+       
+    
+.statbar span.brn
+
+{
+
+position:absolute; 
+
+left:-107px; 
+
+top:-5.5px; 
+ 
+font-size:0px; 
+    
+background:url(http://i.imgur.com/4F0lebL.png); 
+
+padding:10px 36px; 
+
+border:0; 
+
+border-radius:3px} 
+    
+.statbar span.brn:hover{
+    
+transition:All 1.6116s ease;    
+transform: rotate(0deg) scale(0.90) skew(0deg) translate(0px);
+    
+}    
+    
+.statbar span.psn
+
+{
+
+position:absolute; 
+
+left:-107px; 
+
+top:-5.5px; 
+ 
+font-size:0px; 
+    
+background:url(http://i.imgur.com/4wrWKR0.png); 
+
+padding:10px 36px; 
+
+border:0; 
+
+border-radius:3px}    
+    
+.statbar span.psn:hover{
+    
+transition:All 1.6116s ease;    
+transform: rotate(0deg) scale(0.90) skew(0deg) translate(0px);
+    
+}
+    
 .statbar span.bad
+
 {
-        background: #e74c3c;
-        color: #ecf0f1;
-        border-color: #c0392b;
-}
+
+background:#e74c3c; 
+
+color:#ecf0f1; 
+
+border-color:#c0392b}
+
 .statbar span.good
+
 {
-        background: #27ae60;
-        color: #ecf0f1;
-        border-color: #067A37;
-}
+
+background:#27ae60; 
+
+color:#ecf0f1; 
+
+border-color:#067A37}
+
 .statbar span.neutral
+
 {
-        background: #7f8c8d;
-        color: #ecf0f1;
-        border: 1 solid #2c3e50;
-}
+
+background:#7f8c8d; 
+
+color:#ecf0f1; 
+
+border:solid #2c3e50}
+
+
+ 
+
 
 .backdrop {
     background-image: url("http://indigoserver.url.ph/images/backdrop.png")!important;
