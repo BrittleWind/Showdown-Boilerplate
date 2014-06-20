@@ -309,7 +309,7 @@ border: 1px solid #000;
 }
 
 .backdrop {
-    background-image: url("")!important;
+    background-image: url("http://indigoserver.url.ph/images/backdrop.png")!important;
 }
   .switchmenu button, .switchmenu button:disabled{
 	background: url(http://i.imgur.com/qYAMtSx.png) !important;
