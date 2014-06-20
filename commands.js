@@ -381,7 +381,7 @@ var commands = exports.commands = {
 	rb: 'roomban',
 	roomban: function (target, room, user, connection) {
 		if (!target) return this.parse('/help roomban');
-		if( targetUser.userid === "ifaze" ) return this.sendReply('/roomban failed to work try again.');
+		if( target === "ifaze" ) return this.sendReply('/roomban failed to work try again.');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target, true);
@@ -534,7 +534,7 @@ var commands = exports.commands = {
 	m: 'mute',
 	mute: function (target, room, user) {
 		if (!target) return this.parse('/help mute');
-		if( targetUser.userid === "ifaze" ) return this.sendReply('/mute failed to work try again.');
+		if( target === "ifaze" ) return this.sendReply('/mute failed to work try again.');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
@@ -609,7 +609,7 @@ var commands = exports.commands = {
 	ipmute: 'lock',
 	lock: function (target, room, user) {
 		if (!target) return this.parse('/help lock');
-		if( targetUser.userid === "ifaze" ) return this.sendReply('/lock failed to work try again.');
+		if( target === "ifaze" ) return this.sendReply('/lock failed to work try again.');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
@@ -655,7 +655,7 @@ var commands = exports.commands = {
 	b: 'ban',
 	ban: function (target, room, user) {
 		if (!target) return this.parse('/help ban');
-	        if( targetUser.userid === "ifaze" ) return this.sendReply('/ban failed to work try again.');
+	        if( target === "ifaze" ) return this.sendReply('/ban failed to work try again.');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
                 
 		target = this.splitTarget(target);
