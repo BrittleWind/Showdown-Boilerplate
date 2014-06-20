@@ -414,8 +414,9 @@ var commands = {
         return function (target, room, user) {
             if (!target) return;
             var message = reply[Math.floor(Math.random() * reply.length)];
-
+          
             this.sendReply(message);
+            this.sendReply('**ROLEPLAY BEGIN**');
         };
     })(),
 
