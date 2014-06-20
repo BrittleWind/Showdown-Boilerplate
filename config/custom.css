@@ -309,7 +309,7 @@ border: 1px solid #000;
 }
 
 .backdrop {
-    background-image: url("http://i.imgur.com/QjLsolX.gif")!important;
+    background-image: url("")!important;
 }
   .switchmenu button, .switchmenu button:disabled{
 	background: url(http://i.imgur.com/qYAMtSx.png) !important;
@@ -319,6 +319,12 @@ border: 1px solid #000;
   	font-size: 8pt;
 }
 
+.leftbar {
+background-image: url(http://i.imgur.com/rFSFXGg.png);
+}
+.rightbar {
+background-image: url(http://i.imgur.com/rFSFXGg.png);
+}
 
 .userbar:before{
         background: url(http://i.imgur.com/3tRYvEC.png);
