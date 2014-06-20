@@ -339,7 +339,7 @@ var core = exports.core = {
         'hbang': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0179-headbang.gif',
         '(drunk)': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0175-drunk.gif',
         '(tmi)': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0184-tmi.gif',
-        '(dance)'; 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0169-dance.gif',
+        '(dance)': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0169-dance.gif',
         'rofl': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0140-rofl.gif',
         ':?': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0138-thinking.gif',
         ':@': 'http://factoryjoe.s3.amazonaws.com/emoticons/emoticon-0121-angry.gif',
