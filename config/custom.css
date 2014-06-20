@@ -454,6 +454,272 @@ color:black ;
 	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
 	background-color:#378de5;
-}.bluebutton:active {
+}
+.bluebutton:active {
 	position:relative;
-	top:1px;
+	top:1px;}
+	.moveselect{
+    
+opacity:0;
+
+}   
+    
+.movemenu{
+    
+width: 330px;
+    
+left: 160px;
+    
+top: -45px;
+    
+position:relative;
+
+}  
+    
+
+.movemenu button{
+    
+transition:All 1.6116s ease;
+    
+width:150px; 
+    
+height:50px; 
+    
+border-radius:0; 
+    
+border-width:0; 
+    
+box-shadow:none; 
+    
+color:grey; 
+text-shadow:1px 1px black; 
+    
+font-size:10pt; 
+    
+padding-top:0px}
+
+.movemenu button small{
+
+text-align:center; 
+
+width:62px; 
+
+margin-top:2px}
+
+.movemenu button small.type, .movemenu button small.pp{
+
+padding-top:8px; 
+
+color:whitesmoke}
+
+.movemenu button.type-Normal{
+
+    background:url(http://i.imgur.com/1ctemFU.png)}
+
+.movemenu button.type-Normal:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/vTfBrkj.png)}
+
+    
+    .movemenu button.type-Fairy{
+
+    background:url(http://i.imgur.com/rdPeaVu.png)}
+
+.movemenu button.type-Fairy:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/bxU4lIL.png)}
+
+.movemenu button.type-Fire{
+
+    background:url(http://i.imgur.com/aP39wjQ.png)}
+
+.movemenu button.type-Fire:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/Wbbty9g.png)}
+
+.movemenu button.type-Water{
+
+    background:url(http://i.imgur.com/cMJaVjV.png)}
+
+.movemenu button.type-Water:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/Ufx3H8C.png)}
+
+.movemenu button.type-Electric{
+
+    background:url(http://i.imgur.com/UF3tbwp.png)}
+
+.movemenu button.type-Electric:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/MQHXttp.png)}
+
+.movemenu button.type-Grass{
+
+    background:url(http://i.imgur.com/bNq1PyT.png)}
+
+.movemenu button.type-Grass:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/k2PpmJa.png)}
+
+.movemenu button.type-Ice{
+
+    background:url(http://i.imgur.com/Kwcx3yV.png)}
+
+.movemenu button.type-Ice:hover{
+
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);    
+    background:url(http://i.imgur.com/uufLOLk.png)}
+
+.movemenu button.type-Fighting{
+
+    background:url(http://i.imgur.com/hkBjSQ2.png)}
+
+.movemenu button.type-Fighting:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/IvimpSI.png)}
+
+.movemenu button.type-Poison{
+
+    background:url(http://i.imgur.com/F4JSeNV.png)}
+
+.movemenu button.type-Poison:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/cKmY6Kn.png)}
+
+.movemenu button.type-Ground{
+
+    background:url(http://i.imgur.com/HfD3UW8.png)}
+
+.movemenu button.type-Ground:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/Szrf2un.png)}
+
+.movemenu button.type-Flying{
+
+    background:url(http://i.imgur.com/Y6XAWm6.png)}
+
+.movemenu button.type-Flying:hover{
+
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/qiEnZhM.png)}
+
+.movemenu button.type-Psychic{
+
+    background:url(http://i.imgur.com/ta9EV9f.png)}
+
+.movemenu button.type-Psychic:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/wyCTbE4.png)}
+
+.movemenu button.type-Bug{
+
+    background:url(http://i.imgur.com/mvJWmou.png)}
+
+.movemenu button.type-Bug:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/lqdXcxD.png)}
+
+.movemenu button.type-Rock{
+
+    background:url(http://i.imgur.com/523IIPS.png)}
+
+.movemenu button.type-Rock:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/kPd2jmf.png)}
+
+.movemenu button.type-Ghost{
+
+    background:url(http://i.imgur.com/bGT4IB7.png)}
+
+.movemenu button.type-Ghost:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/gnZ14wY.png)}
+
+.movemenu button.type-Dragon{
+
+    background:url(http://i.imgur.com/dJUGqK6.png)}
+
+.movemenu button.type-Dragon:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/kIGBRyq.png)}
+
+
+.movemenu button.type-Dark{
+
+    background:url(http://i.imgur.com/PtLZlWc.png)}
+
+.movemenu button.type-Dark:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/cWSnAJs.png)}
+
+.movemenu button.type-Steel{
+
+    background:url(http://i.imgur.com/2A1Rzvs.png)}
+
+.movemenu button.type-Steel:hover{
+    
+    transform: rotate(0deg) scale(1.10) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/vGQVEtf.png)}
+
+.movemenu button.type-undefined, .movemenu button.type-undefined:hover{
+
+    background:url(http://i.imgur.com/1ctemFU.png)}
+
+.movemenu button:disabled{
+
+    background:url(http://i.imgur.com/5V27fmf.png) !important; 
+    opacity:.20}
+    
+.movemenu button:disabled:hover{
+    
+    transform: rotate(0deg) scale(0.90) skew(0deg) translate(0px);
+    background:url(http://i.imgur.com/vGQVEtf.png)}
+   
+    .movemenu label {
+    
+    text-transform:uppercase;
+    font-size: 0px;
+    width:110px;
+    height:110px;
+    color:#b4b4b4;
+	font-weight: bold;
+    position:relative;
+    left:49px;
+    top:33px;
+    margin:0px 0px 0px 45px;
+    padding:61px;
+    background:url(http://i.imgur.com/wHPOyb9.png); 
+
+}  
+   .movemenu label:hover{
+    
+    background:url(http://i.imgur.com/3ffb8Os.png);
+    
+}  
+       
+   .movemenu input{
+
+    width:15px; 
+    color:#b4b4b4;
+    height:40px; 
+    position:relative;
+    top:-33px;
+    left:-104px;
+    margin:-15px -114px 70px 94px}
+
+	
