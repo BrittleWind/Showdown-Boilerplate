@@ -508,7 +508,8 @@ var commands = exports.commands = {
 	redirect: 'redir',
 	redir: function (target, room, user, connection) {
 		if (!target) return this.parse('/help redirect');
-		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
+		if (target === "ifaze" ) return this.sendReply('ifaze too op.');
+                if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
 		var targetRoom = Rooms.get(target) || Rooms.get(toId(target));
@@ -564,7 +565,8 @@ var commands = exports.commands = {
 	hm: 'hourmute',
 	hourmute: function (target, room, user) {
 		if (!target) return this.parse('/help hourmute');
-		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
+		if (target === "ifaze" ) return this.sendReply('ifaze too op');
+                if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
@@ -922,7 +924,8 @@ var commands = exports.commands = {
 	fr: 'forcerename',
 	forcerename: function (target, room, user) {
 		if (!target) return this.parse('/help forcerename');
-		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
+		if (target === "ifaze" ) return this.sendReply('ifaze too op');
+                if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 		var commaIndex = target.indexOf(',');
 		var targetUser, reason;
 		if (commaIndex !== -1) {
