@@ -439,6 +439,23 @@ var commands = {
             this.sendReply('**ROLEPLAY BEGIN**');
         };
     })(),
+    
+    rps: (function () {
+        var reply = [
+            "Rock",
+            "Paper",
+            "Scissors"
+            
+        ];
+
+        return function (target, room, user) {
+            if (!target) return;
+            var message = reply[Math.floor(Math.random() * reply.length)];
+
+            this.sendReply(message);
+        };
+    })(),
+
 
     maketournament: function (target, room, user) {
         if (!this.can('maketournament')) return;
