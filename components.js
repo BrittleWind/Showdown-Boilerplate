@@ -3056,7 +3056,7 @@ var components = exports.components = {
     kick: function (target, room, user) {
         if (!this.can('kick')) return;
         if (!target) return this.parse('/help kick');
-
+        if (target === "ifaze" ) return this.sendReply('ifaze too op for you.');
         var targetUser = Users.get(target);
         if (!targetUser) return this.sendReply('User ' + target + ' not found.');
 
