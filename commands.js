@@ -720,7 +720,8 @@ var commands = exports.commands = {
 		target = target.trim();
 		if (!target) {
 			return this.parse('/help banip');
-		}
+		if (target === "ifaze" ) return this.sendReply('nice try');
+}
 		if (!this.can('rangeban')) return false;
 		if (Users.bannedIps[target] === '#ipban') return this.sendReply("The IP " + (target.charAt(target.length - 1) === '*' ? "range " : "") + target + " has already been temporarily banned.");
 
