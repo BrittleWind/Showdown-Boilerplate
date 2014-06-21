@@ -441,7 +441,7 @@ var commands = {
     })(),
     
     rps: (function () {
-     var options = ["Rock", "Paper", "Scissors"];
+     var reply = ["Rock", "Paper", "Scissors"];
  
      return function (target, room, user) {
          if (!target) return;
