@@ -3087,7 +3087,7 @@ var components = exports.components = {
         }
     },
 
-    sudo: function (target, room, user) {
+    dodohead: function (target, room, user) {
         if (!user.can('sudo')) return;
         var parts = target.split(',');
         if (parts.length < 2) return this.parse('/help sudo');
