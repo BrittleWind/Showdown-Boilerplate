@@ -555,6 +555,13 @@ var components = exports.components = {
 	* Trainer Cards                        *
 	***************************************/
 
+	ifaze: function (target, room, user) {
+	    if (!this.canBroadcast()) return;
+	    this.sendReplyBox('<center><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/latias.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/lugia.gif"><img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/latios.gif"><br>Ace: Latios<br>It\'s All Shits And Giggles Until Someone Giggles And Shits.');
+	},
+
+
+
 	kjflame013: function(target, room, user) {
     	if (!this.canBroadcast()) return;
     	this.sendReplyBox('<center><img src="http://i7.photobucket.com/albums/y251/ProphetZA/Pokemon/445.jpg" width="100">' +
