@@ -440,7 +440,7 @@ var commands = {
         };
     })(),
     
-    rps: (function () {
+    /*rps: (function () {
         var reply = [
             "Rock",
             "Paper",
@@ -454,7 +454,53 @@ var commands = {
 
             this.sendReply(message);
         };
-    })(),
+    })(),*/
+    rps: (function () {
+     var options = ["Rock", "Paper", "Scissors"];
+ 
+     var rpsRes = function (target, room, user) {
+         if (!target){
+             return false;
+         }
+         if (target != "rock" || "paper" || "scissors"){
+             return false;
+         }
+         var randomNumber = Math.floor(Math.random() * options.length);
+         var botChoice = reply[randomNumber];
+         if (botChoice == target) {
+             this.sendReply(botChoice)
+             this.sendReply('Tie!')
+         }
+         if (botChoice == options[0]) {
+             if (target == 'Paper') {
+                 this.sendReply(botChoice)
+                 this.sendReply('You win!');
+             } else if (target == 'Scissors') {
+                 this.sendReply(botChoice)
+                 this.sendReply('Omega bot wins!');
+             }
+         }
+         if (botChoice == options[1]) {
+             if (target == 'Rock') {
+                 this.sendReply(botChoice)
+                 this.sendReply('Omega bot wins!');
+             } else if (target == 'Scissors') {
+                 this.sendReply(botChoice)
+                 this.sendReply('You win!');
+             }
+         }
+         if (botChoice == options[2]) {
+             if (target == 'Rock') {
+                 this.sendReply(botChoice)
+                 this.sendReply('You win!');
+             } else if (target == 'Scissors') {
+                 this.sendReply(botChoice)
+                 this.sendReply('Omega bot wins!');
+             }
+         }
+         this.sendReply(message);
+     };
+ })(),
 
 
     maketournament: function (target, room, user) {
