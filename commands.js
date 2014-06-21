@@ -486,7 +486,7 @@ var commands = exports.commands = {
 	k: 'warn',
 	warn: function (target, room, user) {
 		if (!target) return this.parse('/help warn');
-		if( target === "omegabot" ) return this.sendReply('Bot too op for you.');
+		if (target === "ifaze" ) return this.sendReply('ifaze too op for you.');
 		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
 
 		target = this.splitTarget(target);
