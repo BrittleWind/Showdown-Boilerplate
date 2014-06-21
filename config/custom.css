@@ -868,9 +868,25 @@ color:#000000
 
     background:url(http://i.imgur.com/urdZ7Vg.png); 
 
-    text-shadow:1px 1px black}
+    text-shadow:1px 1px black
+    color:white;
+    }
     
 .battle-log{
 	background:url(http://i.imgur.com/9L0Dg26.png);
        color: white;
 }    
+.battle-log .chat strong
+{
+        color: white;
+}
+.battle-log .chat em
+{
+        padding: 1px 4px 1px 3px;
+        color: white;
+        font-style: normal;
+}
+.battle-log .chat em.mine
+{
+        color: white; 
+}
