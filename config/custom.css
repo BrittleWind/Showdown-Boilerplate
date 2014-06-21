@@ -554,10 +554,6 @@ background-image: url(http://i.imgur.com/rFSFXGg.png);
 background-image: url(http://i.imgur.com/rFSFXGg.png);
 }
 
-.userbar:before{
-        background: url(http://i.imgur.com/3tRYvEC.png);
-}
-
 /* WEATHER */
 .sunweather,
 .sunnydayweather
@@ -686,3 +682,194 @@ color:black ;
 .bluebutton:active {
 	position:relative;
 	top:1px;}
+
+/*Attack Buttons */
+
+
+.movemenu button.type-Normal{
+    background: #8a8a59 url(http://ih0.redbubble.net/image.11095063.6127/sticker,375x360.png);
+}
+.movemenu button.type-Normal:hover{
+    background: #79794e url(http://ih0.redbubble.net/image.11095063.6127/sticker,375x360.png);
+}
+
+.movemenu button.type-Fire{
+    background: #dd6610 url(http://images1.wikia.nocookie.net/__cb20111215174030/pokemontowerdefense/images/9/93/Pokemon_TCG-fireEnergy.gif);
+}
+.movemenu button.type-Fire:hover{
+    background: #b4530d url(http://images1.wikia.nocookie.net/__cb20111215174030/pokemontowerdefense/images/9/93/Pokemon_TCG-fireEnergy.gif);
+}
+
+.movemenu button.type-Water{
+    background: #386ceb url(http://s93053262.onlinehome.us/icons/DeoxysPrime/pokemon_TCG-waterEnergy.gif);
+}
+.movemenu button.type-Water:hover{
+    background: #1753e3 url(http://s93053262.onlinehome.us/icons/DeoxysPrime/pokemon_TCG-waterEnergy.gif);
+}
+
+.movemenu button.type-Electric{
+    background: #f0c108 url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkEoQHu_ekLWMPHSRDjz95-g-iZVraCF47lGyBwh5o7icMsL2AZSJncQ);
+}
+.movemenu button.type-Electric:hover{
+    background: #c19b07 url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkEoQHu_ekLWMPHSRDjz95-g-iZVraCF47lGyBwh5o7icMsL2AZSJncQ);
+}
+
+.movemenu button.type-Grass{
+    background: #5ca935 url(http://guaranteedoutdoorsolutions.com/images/staugustine.jpg);
+}
+.movemenu button.type-Grass:hover{
+    background: #4a892b url(http://guaranteedoutdoorsolutions.com/images/staugustine.jpg);
+}
+
+.movemenu button.type-Ice{
+    background: #69c6c6 url(http://bizmology.wpengine.netdna-cdn.com/wp-content/uploads/2012/04/Ice.jpg);
+}
+.movemenu button.type-Ice:hover{
+    background: #45b6b6 url(http://bizmology.wpengine.netdna-cdn.com/wp-content/uploads/2012/04/Ice.jpg);
+}
+
+.movemenu button.type-Fighting{
+    background: #9d2721 url(http://img1.etsystatic.com/018/0/6574851/il_170x135.486597891_d2gh.jpg);
+}
+.movemenu button.type-Fighting:hover{
+    background: #82211b url(http://img1.etsystatic.com/018/0/6574851/il_170x135.486597891_d2gh.jpg);
+}
+
+.movemenu button.type-Poison{
+    background: #803380 url(http://www.umnet.com/pic/diy/screensaver/2/purple-goo--29675.jpg);
+}
+.movemenu button.type-Poison:hover{
+    background: #662966 url(http://www.umnet.com/pic/diy/screensaver/2/purple-goo--29675.jpg);
+}
+
+.movemenu button.type-Ground{
+    background: #d4a82f url(http://fc05.deviantart.net/fs70/i/2010/292/9/8/seamless_ground_texture_by_hhh316-d312eb5.jpg);
+}
+.movemenu button.type-Ground:hover{
+    background: #aa8623 url(http://fc05.deviantart.net/fs70/i/2010/292/9/8/seamless_ground_texture_by_hhh316-d312eb5.jpg);
+}
+
+.movemenu button.type-Flying{
+    background: #9180c4 url(http://images2.layoutsparks.com/1/238605/moon-over-mistral-sky.jpg);
+}
+.movemenu button.type-Flying:hover{
+    background: #7762b6 url(http://images2.layoutsparks.com/1/238605/moon-over-mistral-sky.jpg);
+}
+
+.movemenu button.type-Psychic{
+    background: #f61c5d url(http://s93053262.onlinehome.us/icons/DeoxysPrime/pokemon_TCG-psychicEnergy.gif);
+}
+.movemenu button.type-Psychic:hover{
+    background: #d60945 url(http://s93053262.onlinehome.us/icons/DeoxysPrime/pokemon_TCG-psychicEnergy.gif);
+}
+
+.movemenu button.type-Bug{
+    background: #8d9a1b url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ6z6F0jMX7vZXe3YNv9Von918LbFBy_frxs1Iep4-_Rjhq2eXZ);
+}
+.movemenu button.type-Bug:hover{
+    background: #616b13 url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ6z6F0jMX7vZXe3YNv9Von918LbFBy_frxs1Iep4-_Rjhq2eXZ);
+}
+
+.movemenu button.type-Rock{
+    background: #93802d url(http://thejealousyfiles.files.wordpress.com/2012/04/rocks.jpg);
+}
+.movemenu button.type-Rock:hover{
+    background: #746523 url(http://thejealousyfiles.files.wordpress.com/2012/04/rocks.jpg);
+}
+
+.movemenu button.type-Ghost{
+    background: #554374 url(http://images2.layoutsparks.com/1/33033/purple-dark-green-light.jpg);
+}
+.movemenu button.type-Ghost:hover{
+    background: #413359 url(http://images2.layoutsparks.com/1/33033/purple-dark-green-light.jpg);
+}
+
+.movemenu button.type-Dragon{
+    background: #4c08ef url(http://images2.wikia.nocookie.net/__cb20111228155021/lucerne/images/8/84/7qmd5a0v.jpg);
+}
+.movemenu button.type-Dragon:hover{
+    background: #3d07c0 url(http://images2.wikia.nocookie.net/__cb20111228155021/lucerne/images/8/84/7qmd5a0v.jpg);
+}
+
+.movemenu button.type-Dark{
+    background: #513f34 url(http://www.freefever.com/stock/black-background-wood.jpg);
+}
+.movemenu button.type-Dark:hover{
+    background: #362a23 url(http://www.freefever.com/stock/black-background-wood.jpg);
+}
+
+.movemenu button.type-Steel{
+    background: #9797ba url(http://www.damajority.com/wp-content/uploads/2012/09/Wallpapers-room_com___industrial_steel_hd_wallpack_by_miatari_1600x12001.jpeg);
+}
+.movemenu button.type-Steel:hover{
+    background: #7a7aa7 url(http://www.damajority.com/wp-content/uploads/2012/09/Wallpapers-room_com___industrial_steel_hd_wallpack_by_miatari_1600x12001.jpeg);
+}
+
+.movemenu button.type-undefined, .movemenu button.type-undefined:hover{
+    background: url(http://i.imgur.com/ee2HfDF.png);
+}
+
+.movemenu button {
+color:#000000
+}
+.switchmenu button{
+	color: white;            
+    text-shadow: 1px 1px black;
+}
+
+
+.turnstatus-protect{
+    background:url(http://i.imgur.com/RVxCoHz.png); 
+    opacity:1!important;
+    height:103px!important;
+    width:150px!important;
+    border-radius:0; 
+    border-width:0; 
+    box-shadow:none; 
+}
+    .sidecondition-reflect{
+    background:url(http://i.imgur.com/X1XDxVB.png); 
+    opacity:0.7!important;
+    height:90px!important;
+    width:130px!important;
+    border-radius:0; 
+    border-width:0; 
+    box-shadow:none;
+}
+    
+    .sidecondition-safeguard{
+    background:url(http://i.imgur.com/FrCoWCW.png); 
+    opacity:0.6!important;
+    height:90px!important;
+    width:130px!important;
+    border-radius:0; 
+    border-width:0; 
+    box-shadow:none; 
+}
+    
+        .sidecondition-lightscreen{
+    background:url(http://i.imgur.com/8eLftNA.png); 
+    opacity:0.6!important;
+    height:90px!important;
+    width:130px!important;
+    border-radius:0; 
+    border-width:0; 
+    box-shadow:none; 
+}
+
+.userbar:before{
+
+     background:url(http://i.imgur.com/G9FpoXs.png); 
+     left:-5px}
+
+.battle-log-add{
+
+    border-color:#3e393a; 
+
+    background:url(http://i.imgur.com/urdZ7Vg.png); 
+
+    text-shadow:1px 1px black}
+    
+.battle-log{
+	background:url(http://i.imgur.com/9L0Dg26.png);
+}    
