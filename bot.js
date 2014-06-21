@@ -441,39 +441,21 @@ var commands = {
     })(),
     
     rps: (function () {
-     var reply = ["Rock", "Paper", "Scissors"];
- 
-     return function (target, room, user) {
-         if (!target) return;
-         if (target != "rock" || "paper" || "scissors") return;
-         var botChoice = reply[Math.floor(Math.random() * reply.length)];
-         if (botChoice == target) {
-             this.sendReply('Tie!')
-         }
-         if (botChoice == reply[0]) {
-             if (target == 'Paper') {
-                 this.sendReply('You win!');
-             } else if (target == 'Scissors') {
-                 this.sendReply('Omega bot wins!');
-             }
-         }
-         if (botChoice == reply[1]) {
-             if (target == 'Rock') {
-                 this.sendReply('Omega bot wins!');
-             } else if (target == 'Scissors') {
-                 this.sendReply('You win!');
-             }
-         }
-         if (botChoice == reply[2]) {
-             if (target == 'Rock') {
-                 this.sendReply('You win!');
-             } else if (target == 'Scissors') {
-                 this.sendReply('Omega bot wins!');
-             }
-         }
-         this.sendReply(message);
-     };
- })(),
+        var reply = [
+            "Rock",
+            "Paper",
+            "Scissors"
+            
+        ];
+
+        return function (target, room, user) {
+            if (!target) return;
+            var message = reply[Math.floor(Math.random() * reply.length)];
+
+            this.sendReply(message);
+        };
+    })(),
+
 
     maketournament: function (target, room, user) {
         if (!this.can('maketournament')) return;
