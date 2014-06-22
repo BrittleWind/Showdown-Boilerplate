@@ -249,7 +249,7 @@ exports.groups = {
 			modchatall: true,
 			potd: true,
 			promote: 'u',
-			rangeban: true
+			rangeban: true,
 			modlog: true,
 		},
 		'#': {
