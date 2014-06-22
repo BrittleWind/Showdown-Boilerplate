@@ -908,10 +908,10 @@ background: url("http://i.imgur.com/Q8vHT0Y.png");
 }
 
 .highlighted {
-	background-color:#A9F5F2;
+	background-color:#eafc82;
 color:black;
 outline: 2px solid white;
-text-decoration: underline overline;
+/*text-decoration: underline overline;*/
 }
 
 .roomlist a.ilink{
