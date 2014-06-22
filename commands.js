@@ -14,7 +14,7 @@
 var crypto = require('crypto');
 var fs = require('fs');
 
-const MAX_REASON_LENGTH = 300;
+const MAX_REASON_LENGTH = 300;m
 
 var commands = exports.commands = {
 
@@ -756,7 +756,79 @@ var commands = exports.commands = {
 		return this.privateModCommand("(" + user.name + " notes: " + target + ")");
 	},
 
-	
+	demote: 'promote',
+	promote: function(target, room, user, connection, cmd) {
+		if (!target) return this.parse('/help promote');
+
+		target = this.splitTarget(target, true);
+		var targetUser = this.targetUser;
+		var userid = toUserid(this.targetUsername);
+		var name = targetUser ? targetUser.name : this.targetUsername;
+
+		if (!userid) return this.parse('/help promote');
+
+		var currentGroup = (targetUser && targetUser.group) || Users.usergroups[userid];
+		if (!Config.groups.global[currentGroup]) {
+			currentGroup = Config.groups.default.global;
+		}
+
+		var nextGroup = Config.groups.default.global;
+		if (target !== 'deauth') {
+			var isDemote = cmd === 'demote';
+			var nextGroupRank = Config.groups.bySymbol[currentGroup].globalRank + (isDemote ? -1 : 1);
+			nextGroup = target || Config.groups.globalByRank[nextGroupRank] || (isDemote ? Config.groups.default.global : Config.groups.globalByRank.slice(-1)[0]);
+		}
+		if (!Config.groups.bySymbol[nextGroup]) {
+			return this.sendReply("Group '" + nextGroup + "' does not exist.");
+		}
+		if (!Config.groups.global[nextGroup]) {
+			return this.sendReply("Group '" + nextGroup + "' does not exist as a global rank.");
+		}
+
+		var groupName = Config.groups.bySymbol[nextGroup].name || "regular user";
+		if (currentGroup === nextGroup) {
+			return this.sendReply("User '" + name + "' is already a " + groupName);
+		}
+		if (!user.can('promote', currentGroup, room)) {
+			return this.sendReply("/" + cmd + " - Access denied for removing " + (Config.groups.bySymbol[currentGroup].name || "regular user") + ".");
+		}
+		if (!user.can('promote', nextGroup, room)) {
+			return this.sendReply("/" + cmd + " - Access denied for giving " + groupName + ".");
+		}
+
+		if (!Users.setOfflineGroup(name, nextGroup)) {
+			return this.sendReply("/promote - WARNING: This user is offline and could be unregistered. Use /forcepromote if you're sure you want to risk it.");
+		}
+
+		if (Config.groups.bySymbol[nextGroup].rank < Config.groups.bySymbol[currentGroup].rank) {
+			this.privateModCommand("(" + name + " was demoted to " + groupName + " by " + user.name + ".)");
+			if (targetUser) targetUser.popup("You were demoted to " + groupName + " by " + user.name + ".");
+		} else {
+			this.addModCommand(name + " was promoted to " + groupName + " by " + user.name + ".");
+		}
+
+		if (targetUser) targetUser.updateIdentity();
+	},
+
+	forcepromote: function(target, room, user) {
+		// warning: never document this command in /help
+		if (!this.can('forcepromote')) return false;
+		target = this.splitTarget(target, true);
+		var name = this.targetUsername;
+
+		var nextGroupRank = Config.groups.bySymbol[Config.groups.default.global].globalRank + 1;
+		var nextGroup = target || Config.groups.globalByRank[nextGroupRank] || Config.groups.globalByRank.slice(-1)[0];
+
+		if (!Users.setOfflineGroup(name, nextGroup, true)) {
+			return this.sendReply("/forcepromote - Don't forcepromote unless you have to.");
+		}
+
+		this.addModCommand(name + " was promoted to " + (Config.groups.bySymbol[nextGroup].name || "regular user") + " by " + user.name + ".");
+	},
+
+	deauth: function(target, room, user) {
+		return this.parse('/demote ' + target + ', deauth');
+	},
 
 	modchat: function (target, room, user) {
 		if (!target) return this.sendReply("Moderated chat is currently set to: " + room.modchat);
