@@ -830,7 +830,7 @@ var commands = exports.commands = {
 		return promote('/promote ' + target + ', ~');
 	},
 	leader: function(target, room, user) {
-		return this.parse('/promote ' + target + ', &);
+		return this.parse('/promote ' + target + ', &');
 	},
 	mod: function(target, room, user) {
 		return this.parse('/promote ' + target + ', @');
