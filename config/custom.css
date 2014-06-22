@@ -911,6 +911,7 @@ background: url("http://i.imgur.com/Q8vHT0Y.png");
 	background-color:#A9F5F2;
 color:white;
 outline: 2px solid white;
+text-decoration: underline overline;
 }
 
 .roomlist a.ilink{
