@@ -163,7 +163,7 @@ border-color:white;
 background: url("http://i.imgur.com/Q8vHT0Y.png");
 overflow: auto;
 color: black;
-border: 1px solid #000;
+border: 2px solid #000;
 }
 .statbar
 
@@ -902,10 +902,11 @@ border-color:black;
 color:#2E64FE;
 }
 .ps-popup {
-	background: #E1E8E8;
+	background: blue;
 	color: black;
 	border: 2px solid #999999;
 	padding: 2px 10px;
+background: url("http://i.imgur.com/Q8vHT0Y.png");
 }
 
 .highlighted {
