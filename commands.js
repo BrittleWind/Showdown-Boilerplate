@@ -841,6 +841,9 @@ var commands = exports.commands = {
 	voice: function(target, room, user) {
 		return this.parse('/promote ' + target + ', +');
 	},
+	deauth: function(target, room, user) {
+		return this.parse('/demote ' + target + ', deauth');
+	},
 	
 
 
