@@ -913,3 +913,45 @@ color:white;
 outline: 2px solid white;
 }
 
+.roomlist a.ilink{
+     
+font-size:14px;
+font-family: Tahoma, Verdana, Segoe, sans-serif;
+font-weight:bold;
+color:#fbfbfb;  
+text-transform: uppercase;
+text-align:left;
+text-shadow: 1px 1px 1px #4d4d4d,
+1px 0px 1px #4d4d4d;
+background: url(http://i.imgur.com/DqmewkB.png);
+box-shadow:none; 
+border-radius:0px; 
+border-width:0; 
+width:642px;
+padding-left:20px;
+padding-top:10px;
+padding-bottom:12px;
+} 
+    
+
+    
+    
+.roomlist a.ilink:hover{
+      
+font-size:14px;
+font-family: Tahoma, Verdana, Segoe, sans-serif;
+font-weight:bold;
+color:#fbfbfb;  
+text-transform: uppercase;
+text-shadow: 1px 1px 1px #4d4d4d,
+1px 0px 1px #4d4d4d;
+background: url(http://i.imgur.com/UoUnGNL.png);
+box-shadow:none; 
+border-radius:0px; 
+border-width:0; 
+width:642px;
+padding-left:20px;
+padding-top:10px;
+padding-bottom:12px;
+}  
+    
