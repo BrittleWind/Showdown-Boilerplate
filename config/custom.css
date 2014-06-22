@@ -893,4 +893,9 @@ color:#000000
 }
 .challenge {
 background: none;
+color:white;
+}
+
+.chat small {
+color:#2E64FE;
 }
