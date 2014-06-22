@@ -441,21 +441,39 @@ var commands = {
     })(),
     
     rps: (function () {
-        var reply = [
-            "Rock",
-            "Paper",
-            "Scissors"
-            
-        ];
-
-        return function (target, room, user) {
-            if (!target) return;
-            var message = reply[Math.floor(Math.random() * reply.length)];
-
-            this.sendReply(message);
-        };
-    })(),
-
+		var options = ["rock", "paper", "scissors"];
+		
+		return function (target, room, user) {
+		if (!target) return;
+		if (options.indexOf(target) < 0) return;
+		var botChoice = options[Math.floor(Math.random() * options.length)];
+		target = target.toLowerCase();
+		if (botChoice == target) {
+			this.sendReply('I chose ' + botChoice + '. The result is a tie!');
+		}
+		if (botChoice == options[0]) {
+			if (target == 'paper') {
+				this.sendReply('I chose ' + botChoice + '. ' + user.name + ' wins!');
+			} else if (target == 'scissors') {
+				this.sendReply('I chose ' + botChoice + '. ' + user.name + ' looses!');
+			}
+		}
+		if (botChoice == options[1]) {
+			if (target == 'rock') {
+				this.sendReply('I chose ' + botChoice + '. ' + user.name + ' looses!');
+			} else if (target == 'scissors') {
+				this.sendReply('I chose ' + botChoice + '. ' + user.name + ' wins!');
+			}
+		}
+		if (botChoice == options[2]) {
+			if (target.toLowerCase() == 'rock') {
+				this.sendReply('I chose ' + botChoice + '. ' + user.name + ' wins!');
+			} else if (target.toLowerCase() == 'paper') {
+				this.sendReply('I chose ' + botChoice + '. ' + user.name + ' looses!');
+			}
+		}
+		};
+	})(),
 
     maketournament: function (target, room, user) {
         if (!this.can('maketournament')) return;
