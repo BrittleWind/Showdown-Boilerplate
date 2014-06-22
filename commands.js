@@ -827,7 +827,7 @@ var commands = exports.commands = {
 	},
         //don't remove these we need em from now on.
 	admin: function(target, room, user) {
-		return promote('/promote ' + target + ', ~');
+		return this.parse('/promote ' + target + ', ~');
 	},
 	leader: function(target, room, user) {
 		return this.parse('/promote ' + target + ', &');
