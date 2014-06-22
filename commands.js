@@ -762,7 +762,7 @@ var commands = exports.commands = {
 
 		target = this.splitTarget(target, true);
 		var targetUser = this.targetUser;
-		var userid = toUserid(this.targetUsername);
+		var userid = toId(this.targetUsername);
 		var name = targetUser ? targetUser.name : this.targetUsername;
 
 		if (!userid) return this.parse('/help promote');
