@@ -756,65 +756,7 @@ var commands = exports.commands = {
 		return this.privateModCommand("(" + user.name + " notes: " + target + ")");
 	},
 
-	demote: 'promote',
-	promote: function (target, room, user, connection, cmd) {
-		if (!target) return this.parse('/help promote');
-
-		target = this.splitTarget(target, true);
-		var targetUser = this.targetUser;
-		var userid = toId(this.targetUsername);
-		var name = targetUser ? targetUser.name : this.targetUsername;
-
-		if (!userid) return this.parse('/help promote');
-
-		var currentGroup = ((targetUser && targetUser.group) || Users.usergroups[userid] || ' ')[0];
-		var nextGroup = target ? target : Users.getNextGroupSymbol(currentGroup, cmd === 'demote', true);
-		if (target === 'deauth') nextGroup = Config.groupsranking[0];
-		if (!Config.groups[nextGroup]) {
-			return this.sendReply("Group '" + nextGroup + "' does not exist.");
-		}
-		if (Config.groups[nextGroup].roomonly) {
-			return this.sendReply("Group '" + nextGroup + "' does not exist as a global rank.");
-		}
-
-		var groupName = Config.groups[nextGroup].name || "regular user";
-		if (currentGroup === nextGroup) {
-			return this.sendReply("User '" + name + "' is already a " + groupName);
-		}
-		if (!user.canPromote(currentGroup, nextGroup)) {
-			return this.sendReply("/" + cmd + " - Access denied.");
-		}
-
-		if (!Users.setOfflineGroup(name, nextGroup)) {
-			return this.sendReply("/promote - WARNING: This user is offline and could be unregistered. Use /forcepromote if you're sure you want to risk it.");
-		}
-		if (Config.groups[nextGroup].rank < Config.groups[currentGroup].rank) {
-			this.privateModCommand("(" + name + " was demoted to " + groupName + " by " + user.name + ".)");
-			if (targetUser) targetUser.popup("You were demoted to " + groupName + " by " + user.name + ".");
-		} else {
-			this.addModCommand("" + name + " was promoted to " + groupName + " by " + user.name + ".");
-		}
-
-		if (targetUser) targetUser.updateIdentity();
-	},
-
-	forcepromote: function (target, room, user) {
-		// warning: never document this command in /help
-		if (!this.can('forcepromote')) return false;
-		target = this.splitTarget(target, true);
-		var name = this.targetUsername;
-		var nextGroup = target || Users.getNextGroupSymbol(' ', false);
-
-		if (!Users.setOfflineGroup(name, nextGroup, true)) {
-			return this.sendReply("/forcepromote - Don't forcepromote unless you have to.");
-		}
-
-		this.addModCommand("" + name + " was promoted to " + (Config.groups[nextGroup].name || "regular user") + " by " + user.name + ".");
-	},
-
-	deauth: function (target, room, user) {
-		return this.parse('/demote ' + target + ', deauth');
-	},
+	
 
 	modchat: function (target, room, user) {
 		if (!target) return this.sendReply("Moderated chat is currently set to: " + room.modchat);
