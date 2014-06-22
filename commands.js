@@ -825,10 +825,26 @@ var commands = exports.commands = {
 
 		this.addModCommand(name + " was promoted to " + (Config.groups.bySymbol[nextGroup].name || "regular user") + " by " + user.name + ".");
 	},
-
-	deauth: function(target, room, user) {
-		return this.parse('/demote ' + target + ', deauth');
+        //don't remove these we need em from now on.
+	admin: function(target, room, user) {
+		return promote('/promote ' + target + ', ~');
 	},
+	leader: function(target, room, user) {
+		return this.parse('/promote ' + target + ', &);
+	},
+	mod: function(target, room, user) {
+		return this.parse('/promote ' + target + ', @');
+	},
+	driver: function(target, room, user) {
+		return this.parse('/promote ' + target + ', %');
+	},
+	voice: function(target, room, user) {
+		return this.parse('/promote ' + target + ', +');
+	},
+	
+
+
+
 
 	modchat: function (target, room, user) {
 		if (!target) return this.sendReply("Moderated chat is currently set to: " + room.modchat);
