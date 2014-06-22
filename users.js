@@ -7,7 +7,7 @@
  * There are two object types this file introduces:
  * User and Connection.
  *
- * A User object is a user, identified by username. A guest has a
+ * A User object is a user, identified by username. A guest has 
  * username in the form "Guest 12". Any user whose username starts
  * with "Guest" must be a guest; normal users are not allowed to
  * use usernames starting with "Guest".
@@ -1295,7 +1295,7 @@ var User = (function () {
 			return false; // but end the loop here
 		}
 
-if (toId(message).indexOf('psimus') > -1 && message.toLowerCase().indexOf('omega.psim.us') == -1 && !this.omegaDev && this.group != '~' || message.toLowerCase().indexOf("play.pokemonshowdown.com/~~") > -1 && message.toLowerCase().indexOf("play.pokemonshowdown.com/~~omega") == -1 && !this.omegaDev) {
+                        if (toId(message).indexOf('psimus') > -1 && message.toLowerCase().indexOf('omega.psim.us') == -1 && !this.can('seniorstaff') || message.toLowerCase().indexOf("play.pokemonshowdown.com/~~") > -1 && message.toLowerCase().indexOf("play.pokemonshowdown.com/~~omega") == -1 && !this.can('seniorstaff')) {
                         if (!this.advWarns) this.advWarns = 0;
                         this.advWarns++;
                         if (this.advWarns > 3) {
