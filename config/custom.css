@@ -910,4 +910,7 @@ color:#2E64FE;
 
 .highlighted {
 	background-color:#0174DF ;
+color:white;
+outline: 2px solid white;
 }
+
