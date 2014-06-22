@@ -14,7 +14,7 @@
 var crypto = require('crypto');
 var fs = require('fs');
 
-const MAX_REASON_LENGTH = 300;m
+const MAX_REASON_LENGTH = 300;
 
 var commands = exports.commands = {
 
