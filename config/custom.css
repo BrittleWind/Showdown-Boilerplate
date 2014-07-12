@@ -22,6 +22,7 @@ body{
 .menugroup .button{
   background:url('http://i.imgur.com/ccjnsrM.png') !important;
   color: #e2f3d1;
+  border: solid 1px  #437610;
   opacity: .9 !important;
 }
 .menugroup .button:hover{
@@ -31,11 +32,7 @@ body{
 
 }
 .select{
-  /*background: -webkit-linear-gradient(#e2f3d1, #d4edba) !important;
-  background: -o-linear-gradient(#8dd049, #65b119) !important;
-  background: -moz-linear-gradient(#8dd049, #65b119) !important;
-  background: linear-gradient(#c6e7a4, #b8e28d) !important;*/
-  background: #e2f3d1;
+  background: url('http://i.imgur.com/vJSmvR4.png') !important;
   opacity: .7;
   border: none;
 }
@@ -85,42 +82,26 @@ text-align: center;
   padding-right: auto;
 }
 .tabbar a.button.cur, .tabbar a.button.cur:hover{
-  /*background: -webkit-linear-gradient(#fbe2b9, #e1c597);
-  background: -o-linear-gradient(#fbe2b9, #e1c597);
-  background: -moz-linear-gradient(#fbe2b9, #e1c597);
-  background: linear-gradient(#ffeccf, #e1c597);*/
-  background: #e1c597;
+  background: url('http://i.imgur.com/xkzpVn8.png') !important;
   color: black;
   border: 1px solid #c8af86 !important;
 }
 .maintabbarbottom{
-background: #e1c597;
+  background: #e4caa1;
 }
 .tabbar a.button{
-  /*background: -webkit-linear-gradient(#fbe2b9, #c8af86);
-  background: -o-linear-gradient(#fbe2b9, #c8af86);
-  background: -moz-linear-gradient(#fbe2b9, #c8af86);
-  background: linear-gradient(#fbe2b9, #c8af86);*/
-  background: #c8af86;
+  background: url('http://i.imgur.com/dH9EtTs.png') !important;
   border: 1px solid #c8af86 !important;
 }
 .tabbar a.button:hover{
-  /*background: -webkit-linear-gradient(#fbe7c7,#a8987e);
-  background: -o-linear-gradient(#fbe7c7,#a8987e);
-  background: -moz-linear-gradient(#fbe7c7,#a8987e);
-  background: linear-gradient(#fbe7c7,#a8987e);*/
-  background: #a8987e;
+  background: url('http://i.imgur.com/2jMHoaC.png') !important;
   border: 1px solid #c8af86 !important;
 }
 .tabbar a.button:active{
-  /*background: -webkit-linear-gradient(#bdab8e,#fbe7c7);
-  background: -o-linear-gradient(#bdab8e,#fbe7c7);
-  background: -moz-linear-gradient(#bdab8e,#fbe7c7);
-  background: linear-gradient(#bdab8e,#fbe7c7);*/
-  background: #fbe7c7;
+  background: url('http://i.imgur.com/9Jw7LSq.png') !important;
   border: 1px solid #c8af86 !important;
 }
-.header .logo{
+/*.header .logo{
  background: url('http://i.imgur.com/ugAHtUR.png?2');
  width: 146px;
  height: 44px;
@@ -129,7 +110,7 @@ background: #e1c597;
  position: relative;
  top: 1px;
  
-}
+}*/
 .highlighted{
 background: #f8ffa6;
 }
